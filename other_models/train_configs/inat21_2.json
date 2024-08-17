@@ -1,0 +1,37 @@
+{
+    "random_seed": 42,
+
+    "continue_training": false,
+    "device": "cuda",
+    "lr": 0.00001,
+    "min_lr": 1e-6,
+    "weight_decay": 0.0005,
+    "use_amp": true,
+    "n_epoch": 100,
+    "work_dir": "plants_classificator/work_dir/inat21_2",
+
+    "architecture": "efficientnet_b4",
+    "pretrained": "plants_classificator/work_dir/inat21_1/ckpts/last_checkpoint.pth",
+
+    "dataset": "../data/plants/inat21",
+    "batch_size": 128,
+    "n_accumulate_steps": 32,
+    "class_info": "cls_info.csv",
+    "shuffle_train": true,
+    "shuffle_val": false,
+    "num_workers": 4,
+
+    "train_transforms": {
+        "horizontal_flip": true,
+        "vertical_flip": true,
+        "blur": false,
+        "color_jitter": true
+    },
+    "val_transforms": {
+        "horizontal_flip": false,
+        "vertical_flip": false,
+        "blur": false,
+        "color_jitter": false
+    },
+    "result_size": [224, 224]
+}

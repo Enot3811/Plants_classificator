@@ -1,0 +1,36 @@
+{
+    "random_seed": 42,
+
+    "continue_training": false,
+    "device": "cuda",
+    "lr": 0.0001,
+    "weight_decay": 0.0005,
+    "use_amp": true,
+    "n_epoch": 100,
+    "work_dir": "plants_classificator/work_dir/plants_1",
+
+    "architecture": "resnext",
+    "pretrained": true,
+
+    "dataset": "../data/plants/inat17_inat21_clefeol17_plantnet300k",
+    "batch_size": 64,
+    "n_accumulate_steps": 62,
+    "class_info": "cls_info.csv",
+    "shuffle_train": true,
+    "shuffle_val": false,
+    "num_workers": 4,
+
+    "train_transforms": {
+        "horizontal_flip": true,
+        "vertical_flip": true,
+        "blur": false,
+        "color_jitter": true
+    },
+    "val_transforms": {
+        "horizontal_flip": false,
+        "vertical_flip": false,
+        "blur": false,
+        "color_jitter": false
+    },
+    "result_size": [224, 224]
+}
