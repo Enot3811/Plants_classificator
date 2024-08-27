@@ -136,13 +136,10 @@ dmypy.json
 *.nii
 *.nii.gz
 *.mat
-*.png
-*.jpg
 *.h5
 *.hdr
 *.img
 *.nrrd
-*.mp3
 data/
 
 # Model checkpoints

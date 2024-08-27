@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PlantsClassifierAndroid</string>
+    <string name="label_text">Make a photo with camera or select from gallery</string>
+    <string name="model_pth">yolov8m_plants.ptl</string>
+</resources>
